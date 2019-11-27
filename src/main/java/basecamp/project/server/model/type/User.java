@@ -9,4 +9,13 @@ public class User {
         this.firstName = "Test";
         this.lastName = "Lastname";
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
 }

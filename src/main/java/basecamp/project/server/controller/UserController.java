@@ -1,5 +1,6 @@
 package basecamp.project.server.controller;
 
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +35,11 @@ public class UserController {
 
 		result.put("users", userList);
 		return result.toJSONString();
+	}
+
+	@RequestMapping("nrusers")
+	String nrUsers() {
+		return "2";
 	}
 
 

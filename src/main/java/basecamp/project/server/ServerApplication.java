@@ -12,9 +12,4 @@ public class ServerApplication extends SpringBootServletInitializer {
 		SpringApplication.run(ServerApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(ServerApplication.class);
-	}
-
 }

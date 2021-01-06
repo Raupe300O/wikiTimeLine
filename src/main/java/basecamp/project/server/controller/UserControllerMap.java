@@ -5,12 +5,13 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/hello/users")
+public class UserControllerMap {
 
 	@Value("${service.key}")
 	private String key;
@@ -44,4 +45,8 @@ public class UserController {
 	}
 
 
+	@RequestMapping(value = "/view/{userId}")
+	public String getUserData(@PathVariable Integer userId) {
+		return userId.toString();
+	}
 }
